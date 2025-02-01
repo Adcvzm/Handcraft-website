@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Handmade Treasures</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Handmade Treasures</h1>
+            </div>
+            <div class="nav-links">
+                <span id="userDisplayName">👑 Admin</span>
+                <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="admin-dashboard">
+        <div class="dashboard-header">
+            <h2>Admin Dashboard</h2>
+        </div>
+        
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <h3>Total Users</h3>
+                <p>150</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Total Orders</h3>
+                <p>1,234</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-box"></i>
+                <h3>Products</h3>
+                <p>20</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-store"></i>
+                <h3>Sellers</h3>
+                <p>45</p>
+            </div>
+        </div>
+
+        <div class="dashboard-actions">
+            <button class="action-btn" onclick="manageProducts()">
+                <i class="fas fa-box"></i> Manage Products
+            </button>
+            <button class="action-btn" onclick="manageUsers()">
+                <i class="fas fa-users"></i> Manage Users
+            </button>
+            <button class="action-btn" onclick="manageOrders()">
+                <i class="fas fa-shopping-cart"></i> Manage Orders
+            </button>
+            <button class="action-btn" onclick="manageSellers()">
+                <i class="fas fa-store"></i> Manage Sellers
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Handmade Treasures. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location.href = '../../index.html';
+        });
+
+        // Dashboard navigation functions
+        function manageProducts() {
+            window.location.href = './manage-products.html';
+        }
+
+        function manageUsers() {
+            window.location.href = './manage-users.html';
+        }
+
+        function manageOrders() {
+            window.location.href = './manage-orders.html';
+        }
+
+        function manageSellers() {
+            window.location.href = './manage-sellers.html';
+        }
+    </script>
+</body>
+</html> 
